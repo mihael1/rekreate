@@ -1,0 +1,579 @@
+body{
+	margin-top:60px;
+  padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns:1fr;
+
+}
+
+.container{
+  position: fixed;
+  top:0;
+}
+
+#front-pic{
+  width:100vw;
+  padding: 0;
+}
+
+#front-mobile{
+  width: 100vw;
+}
+
+@media screen and (max-width: 530px){
+#logo{
+	width: 50%;
+	float: left;
+  margin-top: 6px;
+}
+
+.top{
+  display:none;
+}
+
+#menu-big{
+  display: none;
+}
+
+.menu{
+	width:50%;
+	float: left;
+}
+
+.burger-nav{
+	display:block;
+	color: #949698;
+	font-size: 2.2em;
+	background-color: white;
+	cursor: pointer;
+	float:right;
+	text-align: right;
+	width: auto;
+	padding-right: 14px;
+}
+
+header .wrapper{
+	width: 100%;
+	padding: 0;
+
+}
+
+.nav-list{
+	overflow: hidden;
+	height: 0;
+	margin:0;
+	width: 100%;
+	list-style: none;
+	padding: 0;
+
+}
+
+.nav-list.open{
+	height: auto;
+}
+
+header nav ul li{
+	float: none;
+	text-align: left;
+	width: 100%;
+	margin-right:0;
+	margin: 0;
+}
+
+header nav ul li a{
+	color: #949698;
+	border-bottom: 1px solid #949698;
+	display: block;
+	margin:0;
+	text-decoration: none;
+}
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300');
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+* {
+  box-sizing: border-box;
+  font-weight: 300;
+}
+.container .menu a,
+.container .menu a:visited,
+.container .menu a:hover,
+.container .menu a:active {
+  color: #8a9272;
+  text-decoration: none;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 3em;
+  text-align: center;
+}
+.outer-menu {
+  position: relative;
+  width:auto;
+  float: right;
+  left: 0;
+  z-index: 1;
+}
+
+
+.outer-menu .checkbox-toggle {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+.outer-menu .checkbox-toggle:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.outer-menu .checkbox-toggle:checked + .hamburger > div:before,
+.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.outer-menu .checkbox-toggle:checked + .hamburger > div:after {
+  opacity: 0;
+}
+.outer-menu .checkbox-toggle:checked ~ .menu {
+  pointer-events: auto;
+  visibility: visible;
+}
+.outer-menu .checkbox-toggle:checked ~ .menu > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: .75s;
+          transition-duration: .75s;
+}
+.outer-menu .checkbox-toggle:checked ~ .menu > div > div {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
+}
+.outer-menu .checkbox-toggle:hover + .hamburger {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+.outer-menu .hamburger {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: .5em 1em;
+  border-radius: 0 0.12em 0.12em 0;
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.outer-menu .hamburger > div {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 2px;
+  background: #8a9272;
+    color:#949698;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.outer-menu .hamburger > div:before,
+.outer-menu .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #8a9272;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.outer-menu .hamburger > div:after {
+  top: 10px;
+}
+.outer-menu .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  outline: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.outer-menu .menu > div {
+  width: 300vw;
+  height: 300vw;
+  color: #FEFEFE;
+  background: rgba(229, 229, 229, 0.9);
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.outer-menu .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.outer-menu .menu > div > div > ul {
+  list-style: none;
+  margin: 0;
+  display: block;
+  max-height: 100vh;
+}
+.outer-menu .menu > div > div > ul > li {
+  padding: 0;
+  margin: 1em;
+  font-size: 24px;
+  display: block;
+}
+.outer-menu .menu > div > div > ul > li > a {
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.outer-menu .menu > div > div > ul > li > a:hover {
+  color: #e5e5e5;
+}
+.outer-menu .menu > div > div > ul > li > a:hover:after {
+  width: 100%;
+}
+.outer-menu .menu > div > div > ul > li > a:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: -0.15em;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e5e5e5;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+}
+
+.piggie{
+	background-color: #BABA9B;
+}
+
+.environment{
+  background-color: #ccccd3;
+}
+/*--------------------------------------------------------------
+Social media buttons
+--------------------------------------------------------------*/
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width:35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+#footer{
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    background-color: #484B4A;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #949698;
+  color: white;
+}
+
+.fa-twitter {
+  background: #949698;
+  color: white;
+}
+
+.fa-google {
+  background: #949698;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #949698;
+  color: white;
+}
+
+.fa-youtube {
+  background: #949698;
+  color: white;
+}
+
+.fa-instagram {
+  background: #949698;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #949698;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #949698;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #949698;
+  color: white;
+}
+
+.fa-android {
+  background: #949698;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #949698;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #949698;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #949698;
+  color: white;
+}
+
+.fa-vine {
+  background: #949698;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #949698;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #949698;
+  color: white;
+}
+
+.fa-flickr {
+  background: #949698;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #949698;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #949698;
+  color: white;
+}
+
+.fa-reddit {
+  background: #949698;
+  color: white;
+}
+
+.fa-rss {
+  background: #949698;
+  color: white;
+}
+
+
+/*--------------------------------------------------------------
+For big screen
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 530px) {
+#logo{
+  width: 175px;
+  float: left;
+  margin-top: 6px;
+
+}
+.container{
+  z-index: 400;
+}
+
+.outer-menu{
+  display:none;
+}
+#menu-big{
+  display: block;
+  right:0;
+  position: fixed;
+  margin-top:30px;
+  z-index: 300;
+
+}
+#menu-big ul{
+  list-style: none;
+  text-align: right;
+}
+#menu-big li{
+  display: inline;
+}
+#menu-big li a{
+  color: #949698;
+  padding: 14px 16px;
+  text-decoration:none;
+}
+body{
+  margin-top: 0;
+}
+
+#front-mobile{
+  display: none;
+}
+
+.top{
+  position: relative;
+  top:0;
+  left:0;
+  display: block;
+
+}
+#rethink-text{
+  position: absolute;
+  top:48%;
+  left:11%;
+  z-index: 500;
+  color:#4f6344;
+  font-size: 200%;
+  font-weight: bold;
+
+
+}
+#parallax{
+  position: relative;
+  top:0;
+  left:0;
+  z-index: 100;
+  width:100vw;
+
+}
+
+#silhuette{
+  position:absolute;
+  top:0;
+  left: 0;
+  z-index: 200;
+  width:100vw;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+
+}
